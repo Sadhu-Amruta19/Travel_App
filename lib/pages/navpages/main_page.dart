@@ -25,37 +25,40 @@ class _MainPageState extends State<MainPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: pages[currentIndex],
-      bottomNavigationBar: GNav(
-        // selectedItemColor: Colors.black54,
-        // unselectedItemColor: Colors.grey.withOpacity(0.5),
-        // showUnselectedLabels: false,
-        // showSelectedLabels: false,
-        // elevation: 0,
-        // items: [
+      bottomNavigationBar: SizedBox(
+        height: 70,
+        child: GNav(
+          // selectedItemColor: Colors.black54,
+          // unselectedItemColor: Colors.grey.withOpacity(0.5),
+          // showUnselectedLabels: false,
+          // showSelectedLabels: false,
+          // elevation: 0,
+          // items: [
 
-        backgroundColor: Colors.black,
-        color: Colors.white,
-        activeColor: Colors.white,
-        gap: 8,
-        onTabChange: onTap,
-        tabs: const [
-          GButton(
-            icon: Icons.home,
-            text: "Home",
-          ),
-          GButton(
-            icon: Icons.bar_chart_sharp,
-            text: "tabbar",
-          ),
-          GButton(
-            icon: Icons.search,
-            text: "Search",
-          ),
-          GButton(
-            icon: Icons.person,
-            text: "Profile",
-          ),
-        ],
+          backgroundColor: Colors.black,
+          color: Colors.white,
+          activeColor: Colors.white,
+          gap: 8,
+          onTabChange: onTap,
+          tabs: const [
+            GButton(
+              icon: Icons.home,
+              text: "Home",
+            ),
+            GButton(
+              icon: Icons.bar_chart_sharp,
+              text: "tabbar",
+            ),
+            GButton(
+              icon: Icons.search,
+              text: "Search",
+            ),
+            GButton(
+              icon: Icons.person,
+              text: "Profile",
+            ),
+          ],
+        ),
       ),
     );
   }
